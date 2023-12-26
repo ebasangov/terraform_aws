@@ -2,7 +2,7 @@
 
 # Local Values
 locals {
-  profile = "default"
+  profile                  = "default"
   vpc_name                 = "erb-vpc"
   internet_gateway_name    = "erb-internet-gateway"
   public_subnet_name       = "erb-public-subnet"
@@ -10,6 +10,8 @@ locals {
   private_db_subnet_name   = "erb-private-db-subnet"
   public_route_table_name  = "erb-public-route-table"
   private_route_table_name = "erb-private-route-table"
+  elastic_ip_name          = "erb-nat-elastic-ip"
+  nat_gateway_name         = "erb-nat-gateway"
 }
 
 # VPC Variables
@@ -28,7 +30,7 @@ variable "az_names" {
 variable "public_subnet_cidr" {
   description = "Public Subnet cidr block"
   type        = list(string)
-  default     = ["172.16.0.0/24", "172.16.1.0/24" ]
+  default     = ["172.16.0.0/24", "172.16.1.0/24"]
 }
 
 variable "private_subnet_cidr" {
