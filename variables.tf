@@ -12,6 +12,8 @@ locals {
   private_route_table_name = "erb-private-route-table"
   elastic_ip_name          = "erb-nat-elastic-ip"
   nat_gateway_name         = "erb-nat-gateway"
+  alb_security_group_name  = "erb-alb-security-group"
+  asg_security_group_name  = "erb-asg-security-group"
 }
 
 # VPC Variables
